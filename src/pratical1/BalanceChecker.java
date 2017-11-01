@@ -9,7 +9,8 @@ public class BalanceChecker {
         //String expression = "{()}";
         //String expression = "{[)}";
         //String expression = "{}[]()";
-        String expression = "(6+2)/(5*3)";
+        //String expression = "(6+2)/(5*3)";
+        String expression = "62+53*/";
         System.out.println("Method \""+expression+"\" is "+checkBrackets(expression)+".");
     }
     
@@ -43,9 +44,19 @@ public class BalanceChecker {
     private static boolean checkPair() {
         return (open == '(' && close == ')')||(open == '{' && close == '}')||(open == '[' && close == ']')? true:false;
     }
-    
-    public static boolean checkPostfix(String expression){
+    /*
+    public static String convertToPostfix(String infix){
+        Stack <Character> operatorStack = new Stack<>();
+        char topOperator;
         
-        return false;
+        for (int i=0;i<infix.length();i++){
+            boolean done = false;
+            nextCharacter = infix.charAt(i);
+            if (isVariable (nextCharacter)){
+                postfix = postfix.append (nextCharacter);
+            }
+        }
+        return "";
     }
+    */
 }
