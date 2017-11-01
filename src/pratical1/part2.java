@@ -11,7 +11,7 @@ public class part2 {
         System.out.print(("Enter a string : "));
         String inputStr = sc.nextLine();
         
-        System.out.println(isPalindrome(inputStr)?inputStr+" is a palindrome":inputStr+" is NOT a palindrome");
+        System.out.println(inputStr + (isPalindrome(inputStr)?" is a palindrome.":" is NOT a palindrome."));
     }
     
     public static boolean isPalindrome(String inputStr){
